@@ -79,6 +79,11 @@ function displayData(arr){
         category.innerHTML=elem.category
         let isAvailable =document.createElement("h4")
         isAvailable.innerHTML=elem.isAvailable==true? "Avaliable" :"NotAvaliable"
+        if(elem.isAvailable==false){
+            let borrewed=document.createElement("h4")
+            borrewed.innerHTML=  `$ Borrewed Date Date.now ()`
+            card.append(borrewed) 
+        }
         container.append(card)
         let button1=document.createElement("button")
         button1.innerHTML="Delete Button"
